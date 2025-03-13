@@ -1,12 +1,10 @@
 # bug-tracker
 
----
-
 ### Setup .env file
 
 ```shell
 MONGO_URI=your_mongo_uri
-PORT=5000
+PORT=5005
 ```
 
 ### Run this app locally
