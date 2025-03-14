@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <!-- Terminal background -->
+  <rect width="600" height="300" rx="10" ry="10" fill="#1E1E1E"/>
+  
+  <!-- Terminal title bar -->
+  <rect width="600" height="30" rx="10" ry="10" fill="#333333"/>
+  <text x="20" y="20" font-family="monospace" font-size="14" fill="#FFFFFF">Terminal - Linker Error</text>
+  
+  <!-- Close button -->
+  <circle cx="580" cy="15" r="7" fill="#FF5F56"/>
+  
+  <!-- Terminal content -->
+  <text font-family="monospace" font-size="14" fill="#CCCCCC">
+    <!-- Command line -->
+    <tspan x="20" y="60">$ g++ -o myprogram main.o utils.o</tspan>
+    
+    <!-- Linker errors -->
+    <tspan x="20" y="90" fill="#F8F8F2">main.o: In function `main':</tspan>
+    <tspan x="20" y="110" fill="#FF5555">main.cpp:(.text+0x2a): undefined reference to `calculateTotal(int, int)'</tspan>
+    <tspan x="20" y="130" fill="#F8F8F2">main.o: In function `processData':</tspan>
+    <tspan x="20" y="150" fill="#FF5555">main.cpp:(.text+0x12c): undefined reference to `Logger::logMessage(std::string)'</tspan>
+    <tspan x="20" y="170" fill="#FF5555">collect2: error: ld returned 1 exit status</tspan>
+    
+    <!-- Visual representation of linking process -->
+    <tspan x="20" y="200" fill="#8BE9FD">Linking process diagram:</tspan>
+  </text>
+  
+  <!-- Visual representation of modules and missing links -->
+  <!-- Module boxes -->
+  <rect x="80" y="220" width="120" height="40" rx="5" ry="5" fill="#BD93F9" stroke="#F8F8F2" stroke-width="2"/>
+  <text x="140" y="245" font-family="monospace" font-size="14" text-anchor="middle" fill="#F8F8F2">main.o</text>
+  
+  <rect x="400" y="220" width="120" height="40" rx="5" ry="5" fill="#BD93F9" stroke="#F8F8F2" stroke-width="2"/>
+  <text x="460" y="245" font-family="monospace" font-size="14" text-anchor="middle" fill="#F8F8F2">utils.o</text>
+  
+  <!-- Broken link lines -->
+  <line x1="200" y1="240" x2="230" y2="220" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="230" y1="220" x2="260" y2="240" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="260" y1="240" x2="290" y2="220" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="290" y1="220" x2="320" y2="240" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="320" y1="240" x2="350" y2="220" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="350" y1="220" x2="380" y2="240" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="380" y1="240" x2="400" y2="240" stroke="#FF5555" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Missing functions icons -->
+  <circle cx="300" cy="220" r="15" fill="#FF5555"/>
+  <text x="300" y="225" font-family="monospace" font-size="18" text-anchor="middle" fill="#F8F8F2">?</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <!-- Terminal background -->
+  <rect width="600" height="300" rx="10" ry="10" fill="#1E1E1E"/>
+  
+  <!-- Terminal title bar -->
+  <rect width="600" height="30" rx="10" ry="10" fill="#333333"/>
+  <text x="20" y="20" font-family="monospace" font-size="14" fill="#FFFFFF">Terminal - Compilation Error</text>
+  
+  <!-- Close button -->
+  <circle cx="580" cy="15" r="7" fill="#FF5F56"/>
+  
+  <!-- Terminal content -->
+  <text font-family="monospace" font-size="14" fill="#CCCCCC">
+    <!-- Command line -->
+    <tspan x="20" y="60">$ gcc -o program main.c</tspan>
+    
+    <!-- Error messages -->
+    <tspan x="20" y="90" fill="#FF6B68">main.c:12:5: error: expected ';' after expression</tspan>
+    <tspan x="20" y="110" fill="#CCCCCC">    printf("Hello World")</tspan>
+    <tspan x="20" y="130" fill="#CCCCCC">    ^</tspan>
+    <tspan x="20" y="150" fill="#CCCCCC">                        ;</tspan>
+    
+    <tspan x="20" y="180" fill="#FF6B68">main.c:15:7: error: use of undeclared identifier 'counter'</tspan>
+    <tspan x="20" y="200" fill="#CCCCCC">    if(counter > 10) {</tspan>
+    <tspan x="20" y="220" fill="#CCCCCC">      ^</tspan>
+    
+    <tspan x="20" y="250" fill="#FF6B68">2 errors generated.</tspan>
+    <tspan x="20" y="280">$</tspan>
+  </text>
+  
+  <!-- Warning icon -->
+  <g transform="translate(520, 240) scale(0.06)">
+    <circle cx="400" cy="400" r="380" fill="#FFCC00" stroke="#333333" stroke-width="40"/>
+    <text x="400" y="520" font-family="Arial" font-size="600" text-anchor="middle" fill="#333333" font-weight="bold">!</text>
+  </g>
+</svg>
